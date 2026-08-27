@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviautosfin — Taller Mecánico en Chile | Mantención, Diagnóstico y Reparación</title>
+<meta name="description" content="Serviautosfin: taller mecánico automotriz en Chile. Mantención preventiva, diagnóstico computarizado, frenos, suspensión y más. Garantía escrita y presupuesto sin costo.">
+<meta property="og:title" content="Serviautosfin — Taller Mecánico en Chile">
+<meta property="og:description" content="Mantención, diagnóstico y reparación de vehículos con garantía escrita. Presupuesto sin costo.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314171A'/%3E%3Ccircle cx='50' cy='50' r='34' fill='none' stroke='%23E8590C' stroke-width='4' stroke-dasharray='8 6'/%3E%3Ccircle cx='50' cy='50' r='22' fill='none' stroke='%23E8590C' stroke-width='4' stroke-dasharray='5 5'/%3E%3Ccircle cx='50' cy='50' r='10' fill='none' stroke='%23E8590C' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Serviautosfin",
+  "image": "",
+  "description": "Taller mecánico automotriz en Chile. Mantención preventiva, diagnóstico computarizado, frenos, suspensión, sistema eléctrico y más.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Vicuña Mackenna 3450, Local 12",
+    "addressLocality": "San Joaquín",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "telephone": "+56912345678",
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-19:00, Sa 09:00-14:00"
+}
+</script>
+
+<style>
+  :root{
+    --ink: #14171A;
+    --ink-soft: #1F2327;
+    --paper: #E8E5DE;
+    --paper-alt: #DEDAD1;
+    --steel: #565C63;
+    --steel-light: #9AA0A6;
+    --line: #C9C4B8;
+    --line-dark: #2C3136;
+    --orange: #E8590C;
+    --orange-dark: #C24A08;
+    --chrome: #CBD1D6;
+    --ok: #2F9E44;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'Work Sans', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --maxw: 1180px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    font-family: var(--body);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color: inherit; }
+  h1,h2,h3{ font-family: var(--display); letter-spacing: .02em; margin:0; text-transform: uppercase; }
+  p{ margin:0; }
+  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .eyebrow{
+    font-family: var(--mono);
+    font-size: .78rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:""; width:22px; height:2px; background: var(--orange); display:inline-block; }
+  section{ padding: 88px 0; }
+  .section-head{ max-width: 640px; margin-bottom: 46px; }
+  .section-head h2{ font-size: clamp(2.1rem, 4vw, 3.1rem); margin-top:10px; line-height:1.02; }
+  .section-head p.lead{ margin-top:16px; color: var(--steel); font-size: 1.05rem; }
+
+  /* reveal on scroll */
+  .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* tread mark */
+  .tread{ color: var(--orange); }
+  .tread circle{ fill:none; stroke:currentColor; }
+
+  /* HEADER */
+  header{
+    position: sticky; top:0; z-index: 50;
+    background: var(--ink);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 24px;
+    max-width: var(--maxw); margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none; }
+  .brand .wordmark{ font-family: var(--display); font-size:1.5rem; letter-spacing:.04em; color:#fff; }
+  .brand .wordmark span{ color: var(--orange); }
+  .navlinks{ display:flex; gap:30px; list-style:none; margin:0; padding:0; }
+  .navlinks a{
+    color: var(--chrome); text-decoration:none; font-size:.92rem; font-weight:500;
+    position:relative; padding-bottom:4px;
+  }
+  .navlinks a:hover{ color:#fff; }
+  .navlinks a::after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--orange);
+    transition: width .25s ease;
+  }
+  .navlinks a:hover::after{ width:100%; }
+  .nav-cta{
+    display:flex; align-items:center; gap:12px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family: var(--body); font-weight:600; font-size:.92rem;
+    padding: 12px 22px; border-radius: 3px; text-decoration:none;
+    border: 1px solid transparent; cursor:pointer;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .btn:active{ transform: translateY(2px); }
+  .btn-primary{ background: var(--orange); color:#fff; }
+  .btn-primary:hover{ background: var(--orange-dark); }
+  .btn-ghost{ background:transparent; border-color: var(--chrome); color:#fff; }
+  .btn-ghost:hover{ background: rgba(255,255,255,.08); }
+  .btn-dark{ background: var(--ink); color:#fff; }
+  .btn-dark:hover{ background: var(--ink-soft); }
+  .btn-block{ width:100%; justify-content:center; }
+
+  #menu-toggle{ display:none; }
+  .burger{ display:none; }
+
+  /* HERO */
+  .hero{
+    background: var(--ink); color:#fff; position:relative; overflow:hidden;
+    padding: 96px 0 70px;
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items:center; position:relative; z-index:2;
+  }
+  .hero h1{
+    font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: .98; color:#fff; margin-top:14px;
+  }
+  .hero h1 em{ font-style:normal; color: var(--orange); }
+  .hero .sub{
+    margin-top: 20px; max-width: 480px; color: var(--chrome); font-size: 1.08rem;
+  }
+  .hero-ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
+  .stats{
+    display:flex; gap: 34px; margin-top: 54px; flex-wrap:wrap;
+  }
+  .stat b{
+    display:block; font-family: var(--mono); font-size: 1.7rem; color: var(--orange);
+  }
+  .stat span{ font-size:.82rem; color: var(--steel-light); }
+  .hero-mark{
+    position:relative; display:flex; align-items:center; justify-content:center;
+  }
+  .hero-mark svg{ width: 100%; max-width: 420px; opacity:.9; }
+  .hero-mark .ring-slow{ animation: spin 60s linear infinite; transform-origin:center; }
+  .hero-mark .ring-slower{ animation: spin 90s linear infinite reverse; transform-origin:center; }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){ .ring-slow,.ring-slower{ animation:none; } }
+
+  /* SERVICES */
+  .services-grid{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    background: var(--line); border:1px solid var(--line);
+  }
+  .svc{
+    background: var(--paper); padding: 30px 26px; min-height: 190px;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .svc .num{ font-family: var(--mono); color: var(--orange); font-size:.82rem; }
+  .svc h3{ font-family: var(--body); text-transform:none; font-weight:700; font-size:1.08rem; letter-spacing:0; }
+  .svc p{ color: var(--steel); font-size:.92rem; }
+  .svc .icon{ width:30px; height:30px; }
+
+  /* WHY US */
+  .why{ background: var(--ink); color:#fff; }
+  .why .section-head .eyebrow{ color: var(--orange); }
+  .why .section-head h2{ color:#fff; }
+  .why .section-head p.lead{ color: var(--chrome); }
+  .why-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  .why-card{ border-top: 2px solid var(--orange); padding-top:18px; }
+  .why-card h3{ font-family:var(--body); text-transform:none; font-weight:700; font-size:1.05rem; color:#fff; }
+  .why-card p{ margin-top:10px; color: var(--steel-light); font-size:.92rem; }
+
+  /* COVERAGE */
+  .coverage .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items:center; }
+  .coverage-list{ list-style:none; margin:14px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
+  .coverage-list li{
+    font-family: var(--mono); font-size:.82rem; background:#fff; border:1px solid var(--line);
+    padding:8px 14px; border-radius:3px;
+  }
+  .map-box{
+    aspect-ratio: 4/3; background: var(--ink); border-radius: 4px; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .map-box svg{ width:70%; opacity:.5; }
+  .map-box .pin{
+    position:absolute; width:14px; height:14px; background:var(--orange); border-radius:50% 50% 50% 0;
+    transform: rotate(-45deg); top:38%; left:47%;
+    box-shadow: 0 0 0 6px rgba(232,89,12,.2);
+  }
+
+  /* TESTIMONIALS */
+  .testi-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .testi{ background:#fff; border:1px solid var(--line); padding:26px; border-radius:4px; }
+  .testi .stars{ color: var(--orange); font-family: var(--mono); letter-spacing:2px; }
+  .testi p{ margin-top:14px; color: var(--ink); font-size:.95rem; }
+  .testi .who{ margin-top:16px; font-size:.82rem; color: var(--steel); font-family: var(--mono); }
+
+  /* CONTACT */
+  .contact{ background: var(--paper-alt); }
+  .contact .wrap{ display:grid; grid-template-columns: .85fr 1.15fr; gap: 54px; }
+  .info-item{ display:flex; gap:14px; margin-bottom:22px; }
+  .info-item .icon{ flex:0 0 auto; width:22px; height:22px; color:var(--orange); margin-top:2px; }
+  .info-item b{ display:block; font-size:.95rem; }
+  .info-item span{ color: var(--steel); font-size:.9rem; }
+
+  form{ background:#fff; border:1px solid var(--line); border-radius:6px; padding: 32px; }
+  .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  .field{ margin-bottom: 18px; }
+  .field label{ display:block; font-size:.82rem; font-weight:600; margin-bottom:6px; }
+  .field input, .field select, .field textarea{
+    width:100%; padding: 12px 14px; border:1px solid var(--line); border-radius:3px;
+    font-family: var(--body); font-size:.95rem; background: var(--paper);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:2px solid var(--orange); outline-offset:1px; background:#fff;
+  }
+  .field textarea{ resize:vertical; min-height:100px; }
+  .check-row{ display:flex; align-items:flex-start; gap:10px; margin-bottom:20px; }
+  .check-row input{ margin-top:4px; }
+  .check-row label{ font-size:.82rem; color: var(--steel); }
+  .check-row a{ color: var(--orange); text-decoration:underline; }
+  .form-msg{ display:none; margin-top:16px; padding:14px 16px; border-radius:4px; font-size:.9rem; }
+  .form-msg.ok{ display:block; background:#E7F6EA; color:var(--ok); border:1px solid #b7e4c0; }
+  .form-msg.err{ display:block; background:#FDECEA; color:#c0392b; border:1px solid #f3b8b3; }
+
+  /* POLICIES */
+  .policies{ background: var(--ink); color:#fff; }
+  .policies .section-head p.lead{ color: var(--chrome); }
+  .accordion{ border-top: 1px solid var(--line-dark); }
+  .acc-item{ border-bottom: 1px solid var(--line-dark); }
+  .acc-btn{
+    width:100%; text-align:left; background:none; border:none; color:#fff;
+    padding: 20px 4px; display:flex; justify-content:space-between; align-items:center;
+    font-family: var(--body); font-weight:600; font-size:1.02rem; cursor:pointer;
+  }
+  .acc-btn .plus{ font-family: var(--mono); color: var(--orange); font-size:1.2rem; transition: transform .25s ease; }
+  .acc-btn[aria-expanded="true"] .plus{ transform: rotate(45deg); }
+  .acc-panel{
+    max-height:0; overflow:hidden; transition: max-height .35s ease;
+  }
+  .acc-panel-inner{ padding: 0 4px 24px; color: var(--chrome); font-size:.92rem; }
+  .acc-panel-inner p{ margin-bottom:12px; }
+  .acc-panel-inner strong{ color:#fff; }
+
+  /* FOOTER */
+  footer{ background: var(--ink-soft); color: var(--chrome); border-top:1px solid var(--line-dark); }
+  .footer-grid{
+    display:grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap:36px; padding: 60px 0 40px;
+  }
+  .footer-grid h4{ color:#fff; font-family:var(--body); font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px; }
+  .footer-grid ul{ list-style:none; margin:0; padding:0; }
+  .footer-grid li{ margin-bottom:10px; font-size:.88rem; }
+  .footer-grid a{ text-decoration:none; color: var(--chrome); }
+  .footer-grid a:hover{ color:#fff; }
+  .footer-bottom{
+    border-top:1px solid var(--line-dark); padding: 20px 0; display:flex; justify-content:space-between;
+    font-size:.78rem; color: var(--steel-light); flex-wrap:wrap; gap:10px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px){
+    .navlinks{ display:none; }
+    .burger{ display:flex; }
+    .hero .wrap{ grid-template-columns:1fr; }
+    .hero-mark{ order:-1; }
+    .hero-mark svg{ max-width:220px; }
+    .services-grid{ grid-template-columns: repeat(2,1fr); }
+    .why-grid{ grid-template-columns: repeat(2,1fr); gap:34px 22px; }
+    .coverage .wrap{ grid-template-columns:1fr; }
+    .testi-grid{ grid-template-columns:1fr; }
+    .contact .wrap{ grid-template-columns:1fr; }
+    .form-row{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px){
+    section{ padding:60px 0; }
+    .services-grid{ grid-template-columns: 1fr; }
+    .why-grid{ grid-template-columns: 1fr; }
+    .stats{ gap:24px; }
+    form{ padding:22px; }
+    .footer-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* mobile menu */
+  .mobile-menu{
+    display:none; flex-direction:column; gap:2px; background: var(--ink);
+    border-top:1px solid var(--line-dark);
+  }
+  .mobile-menu a{
+    color:#fff; text-decoration:none; padding: 16px 24px; border-bottom:1px solid var(--line-dark); font-size:.95rem;
+  }
+  #menu-toggle:checked ~ .mobile-menu{ display:flex; }
+  .burger{
+    background:none; border:1px solid var(--chrome); color:#fff; width:40px; height:40px;
+    border-radius:3px; align-items:center; justify-content:center; cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <svg class="tread" width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="34" stroke-width="5" stroke-dasharray="9 7"/>
+        <circle cx="50" cy="50" r="22" stroke-width="5" stroke-dasharray="6 6"/>
+        <circle cx="50" cy="50" r="10" stroke-width="5"/>
+      </svg>
+      <span class="wordmark">SERVI<span>AUTO</span>SFIN</span>
+    </a>
+    <ul class="navlinks">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#garantia">Garantía</a></li>
+      <li><a href="#cobertura">Cobertura</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+56912345678" class="btn btn-primary" id="cta-call-header">📞 Llamar ahora</a>
+      <input type="checkbox" id="menu-toggle" style="display:none">
+      <label for="menu-toggle" class="burger" aria-label="Abrir menú">☰</label>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#garantia">Garantía</a>
+    <a href="#cobertura">Cobertura</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#politicas">Políticas</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">TALLER MECÁNICO · REGIÓN METROPOLITANA</div>
+      <h1>TU AUTO DEJA <em>HUELLA</em>.<br>NOSOTROS LA CUIDAMOS.</h1>
+      <p class="sub">Mantención, diagnóstico computarizado y reparación mecánica con garantía escrita. Presupuesto sin costo antes de partir cualquier trabajo.</p>
+      <div class="hero-ctas">
+        <a href="tel:+56912345678" class="btn btn-primary" id="cta-call-hero">📞 Llamar ahora</a>
+        <a href="https://wa.me/56912345678?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20mec%C3%A1nico" target="_blank" rel="noopener" class="btn btn-ghost" id="cta-whatsapp-hero">💬 Escribir por WhatsApp</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>+12</b><span>años de experiencia</span></div>
+        <div class="stat"><b>+8.500</b><span>vehículos atendidos</span></div>
+        <div class="stat"><b>4.9★</b><span>valoración de clientes</span></div>
+        <div class="stat"><b>90d</b><span>de garantía escrita</span></div>
+      </div>
+    </div>
+    <div class="hero-mark" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <g class="ring-slow" fill="none" stroke="#E8590C" stroke-width="2">
+          <circle cx="100" cy="100" r="90" stroke-dasharray="14 10" opacity=".55"/>
+          <circle cx="100" cy="100" r="74" stroke-dasharray="4 4" opacity=".7"/>
+        </g>
+        <g class="ring-slower" fill="none" stroke="#CBD1D6" stroke-width="2">
+          <circle cx="100" cy="100" r="58" stroke-dasharray="10 8" opacity=".6"/>
+          <circle cx="100" cy="100" r="42" stroke-dasharray="3 5" opacity=".8"/>
+        </g>
+        <circle cx="100" cy="100" r="26" fill="none" stroke="#E8590C" stroke-width="3" stroke-dasharray="7 5"/>
+        <circle cx="100" cy="100" r="10" fill="#E8590C"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">SERVICIOS</div>
+      <h2>Todo lo que tu vehículo necesita, bajo un mismo techo</h2>
+      <p class="lead">Trabajamos con equipos de diagnóstico actualizados y técnicos certificados para que tu auto vuelva al camino con la confianza puesta a prueba.</p>
+    </div>
+  </div>
+  <div class="services-grid wrap" style="padding:0 24px;">
+    <div class="svc reveal"><span class="num">01</span><h3>Mantención preventiva</h3><p>Cambios de aceite, filtros y revisión según el kilometraje del fabricante.</p></div>
+    <div class="svc reveal"><span class="num">02</span><h3>Diagnóstico computarizado</h3><p>Escaneo electrónico para detectar fallas de motor, sensores y luces de check engine.</p></div>
+    <div class="svc reveal"><span class="num">03</span><h3>Frenos y suspensión</h3><p>Pastillas, discos, amortiguadores y dirección con repuestos homologados.</p></div>
+    <div class="svc reveal"><span class="num">04</span><h3>Motor y caja de cambios</h3><p>Reparación mayor y menor de motor, embrague y transmisión manual o automática.</p></div>
+    <div class="svc reveal"><span class="num">05</span><h3>Sistema eléctrico y batería</h3><p>Diagnóstico de partida, alternador, batería y circuitos eléctricos.</p></div>
+    <div class="svc reveal"><span class="num">06</span><h3>Aire acondicionado</h3><p>Carga de gas, revisión de fugas y mantención del sistema de climatización.</p></div>
+    <div class="svc reveal"><span class="num">07</span><h3>Neumáticos y alineación</h3><p>Rotación, balanceo, alineación y cambio de neumáticos.</p></div>
+    <div class="svc reveal"><span class="num">08</span><h3>Preparación para Revisión Técnica</h3><p>Revisión previa de emisiones, luces y frenos para que apruebes sin sorpresas.</p></div>
+    <div class="svc reveal"><span class="num">09</span><h3>Mecánica a domicilio</h3><p>Diagnóstico y servicios básicos en tu casa u oficina dentro de la zona de cobertura.</p></div>
+  </div>
+</section>
+
+<!-- ============ GARANTÍA / POR QUÉ ============ -->
+<section class="why" id="garantia">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">POR QUÉ ELEGIRNOS</div>
+      <h2>Trabajo que se respalda por escrito</h2>
+      <p class="lead">Nada de promesas verbales: cada servicio queda documentado, con precios claros desde el primer momento.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <h3>Garantía escrita de 90 días</h3>
+        <p>Toda reparación queda respaldada por un documento con los detalles del trabajo realizado.</p>
+      </div>
+      <div class="why-card reveal">
+        <h3>Repuestos originales o equivalentes</h3>
+        <p>Usamos piezas homologadas y te avisamos si existe una alternativa de menor costo.</p>
+      </div>
+      <div class="why-card reveal">
+        <h3>Presupuesto sin costo</h3>
+        <p>Revisamos tu vehículo y te enviamos la cotización antes de iniciar cualquier trabajo.</p>
+      </div>
+      <div class="why-card reveal">
+        <h3>Técnicos certificados</h3>
+        <p>Equipo capacitado en marcas nacionales e importadas, con actualización constante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COBERTURA ============ -->
+<section class="coverage" id="cobertura">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">ZONA DE COBERTURA</div>
+      <h2 style="font-size:clamp(2rem,4vw,2.8rem); margin-top:10px;">Te atendemos donde estés</h2>
+      <p class="lead" style="margin-top:16px; color:var(--steel);">Taller físico en San Joaquín, Región Metropolitana y servicio de mecánica a domicilio en las siguientes comunas:</p>
+      <ul class="coverage-list">
+        <li>Santiago Centro</li><li>Providencia</li><li>Ñuñoa</li><li>Las Condes</li>
+        <li>La Florida</li><li>Maipú</li><li>San Miguel</li><li>Macul</li>
+      </ul>
+      <div style="margin-top:26px;">
+        <a href="#contacto" class="btn btn-dark">Consultar disponibilidad</a>
+      </div>
+    </div>
+    <div class="map-box reveal" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="none" stroke="#CBD1D6" stroke-width="2" stroke-dasharray="10 8"/><circle cx="100" cy="100" r="55" fill="none" stroke="#CBD1D6" stroke-width="2" stroke-dasharray="6 6"/></svg>
+      <span class="pin"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONES ============ -->
+<section id="opiniones">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">OPINIONES</div>
+      <h2>Lo que dicen quienes ya confiaron su auto</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>Me explicaron todo antes de cobrar y el presupuesto se cumplió tal cual. Volveré para la próxima mantención.</p>
+        <div class="who">— C. Rojas, Ñuñoa</div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>Diagnosticaron una falla eléctrica que en otro taller no supieron detectar. Atención rápida y clara.</p>
+        <div class="who">— M. Fuentes, Providencia</div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>Pedí el servicio a domicilio y llegaron puntuales con todo lo necesario. Muy buena experiencia.</p>
+        <div class="who">— J. Soto, La Florida</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">CONTACTO</div>
+      <h2 style="font-size:clamp(2rem,4vw,2.8rem); margin-top:10px;">Cuéntanos qué le pasa a tu auto</h2>
+      <p class="lead" style="margin-top:14px; color:var(--steel);">Responderemos dentro de las próximas horas hábiles con un presupuesto sin costo.</p>
+
+      <div style="margin-top:34px;">
+        <div class="info-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b>Dirección</b><span>Av. Vicuña Mackenna 3450, Local 12, San Joaquín, Región Metropolitana</span></div>
+        </div>
+        <div class="info-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><b>Horario</b><span>Lunes a viernes 9:00–19:00 · Sábado 9:00–14:00</span></div>
+        </div>
+        <div class="info-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0 1 22 16.92Z"/></svg>
+          <div><b>Teléfono / WhatsApp</b><span>+56 9 1234 5678</span></div>
+        </div>
+        <div class="info-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4Z"/><path d="m22 6-10 7L2 6"/></svg>
+          <div><b>Correo</b><span>contacto@serviautosfin.cl</span></div>
+        </div>
+      </div>
+    </div>
+
+    <form id="contact-form" class="reveal" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+56 9 ..." required autocomplete="tel">
+        </div>
+      </div>
+      <div class="field">
+        <label for="correo">Correo electrónico *</label>
+        <input type="email" id="correo" name="correo" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="servicio">Servicio de interés</label>
+        <select id="servicio" name="servicio">
+          <option>Mantención preventiva</option>
+          <option>Diagnóstico computarizado</option>
+          <option>Frenos y suspensión</option>
+          <option>Motor y caja de cambios</option>
+          <option>Sistema eléctrico y batería</option>
+          <option>Aire acondicionado</option>
+          <option>Neumáticos y alineación</option>
+          <option>Preparación para Revisión Técnica</option>
+          <option>Mecánica a domicilio</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="mensaje">Cuéntanos qué le pasa a tu auto</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Marca, modelo, año y síntoma..."></textarea>
+      </div>
+      <div class="check-row">
+        <input type="checkbox" id="acepto" name="acepto" required>
+        <label for="acepto">He leído y acepto la <a href="#pol-privacidad">Política de Privacidad</a> de Serviautosfin. *</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" id="form-submit">Enviar consulta</button>
+      <div class="form-msg" id="form-msg"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ POLÍTICAS ============ -->
+<section class="policies" id="politicas">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">POLÍTICAS</div>
+      <h2>Información legal y condiciones de servicio</h2>
+      <p class="lead">Estos textos son un punto de partida general para Chile. Recomendamos que un abogado los revise antes de publicarlos.</p>
+    </div>
+
+    <div class="accordion reveal">
+
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="pol-privacidad">
+          Política de Privacidad <span class="plus">+</span>
+        </button>
+        <div class="acc-panel" id="pol-privacidad">
+          <div class="acc-panel-inner">
+            <p><strong>1. Responsable del tratamiento.</strong> Serviautosfin (Serviautosfin SpA, RUT 76.543.210-8), con domicilio en Av. Vicuña Mackenna 3450, Local 12, San Joaquín, es responsable de los datos personales recolectados a través de este sitio y sus canales de contacto.</p>
+            <p><strong>2. Datos que recolectamos.</strong> Nombre, teléfono, correo electrónico, datos del vehículo y cualquier información que el usuario entregue voluntariamente en el formulario de contacto o por WhatsApp/teléfono.</p>
+            <p><strong>3. Finalidad.</strong> Los datos se utilizan exclusivamente para responder consultas, elaborar presupuestos, agendar servicios y, si el usuario lo autoriza, enviar recordatorios de mantención u ofertas.</p>
+            <p><strong>4. Base legal y normativa aplicable.</strong> El tratamiento de datos se rige por la Ley N° 19.628 sobre Protección de la Vida Privada y sus modificaciones posteriores.</p>
+            <p><strong>5. Compartición con terceros.</strong> No vendemos ni compartimos tus datos con terceros para fines comerciales ajenos a Serviautosfin, salvo obligación legal.</p>
+            <p><strong>6. Derechos del titular.</strong> Puedes solicitar acceso, rectificación, cancelación u oposición al uso de tus datos escribiendo a contacto@serviautosfin.cl.</p>
+            <p><strong>7. Cambios a esta política.</strong> Podemos actualizar este documento; la fecha de última modificación se indicará al pie del sitio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="pol-terminos">
+          Términos y Condiciones <span class="plus">+</span>
+        </button>
+        <div class="acc-panel" id="pol-terminos">
+          <div class="acc-panel-inner">
+            <p><strong>1. Aceptación.</strong> Al usar este sitio o contratar nuestros servicios, aceptas estos términos y las leyes de protección al consumidor de Chile (Ley N° 19.496).</p>
+            <p><strong>2. Cotizaciones.</strong> Los presupuestos son estimaciones basadas en la información y/o revisión inicial del vehículo. El valor final se confirma por escrito antes de ejecutar cualquier trabajo adicional.</p>
+            <p><strong>3. Autorización de trabajos.</strong> Ningún servicio se realiza sin la autorización expresa del cliente, ya sea de forma presencial, telefónica o por escrito.</p>
+            <p><strong>4. Repuestos.</strong> Cuando corresponda, se informará si un repuesto es original, alternativo u homologado, junto con su diferencia de precio.</p>
+            <p><strong>5. Plazos.</strong> Los tiempos de entrega son referenciales y pueden variar según disponibilidad de repuestos o hallazgos durante la revisión.</p>
+            <p><strong>6. Responsabilidad.</strong> Serviautosfin no se responsabiliza por fallas preexistentes no informadas por el cliente ni por daños derivados del uso indebido del vehículo posterior a la entrega.</p>
+            <p><strong>7. Medios de pago.</strong> Se aceptan los medios de pago informados en el taller al momento de la contratación.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="pol-garantia">
+          Política de Garantía <span class="plus">+</span>
+        </button>
+        <div class="acc-panel" id="pol-garantia">
+          <div class="acc-panel-inner">
+            <p><strong>1. Cobertura.</strong> Los trabajos realizados por Serviautosfin cuentan con garantía de 90 días o 5.000 km corridos, lo que ocurra primero, sobre la mano de obra y los repuestos instalados por el taller.</p>
+            <p><strong>2. Exclusiones.</strong> No cubre daños por mal uso, accidentes, intervención de terceros no autorizados, ni componentes no reparados o reemplazados durante el servicio original.</p>
+            <p><strong>3. Cómo hacerla efectiva.</strong> Presentar el documento de respaldo entregado al finalizar el servicio y contactar al taller dentro del plazo de vigencia.</p>
+            <p><strong>4. Repuestos con garantía de fábrica.</strong> Cuando el repuesto tenga garantía propia del fabricante, esta prevalece según sus condiciones específicas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" aria-controls="pol-cookies">
+          Política de Cookies <span class="plus">+</span>
+        </button>
+        <div class="acc-panel" id="pol-cookies">
+          <div class="acc-panel-inner">
+            <p><strong>1. Uso de cookies.</strong> Este sitio puede utilizar cookies propias y de terceros (por ejemplo, para medir el rendimiento de campañas de Google Ads) con fines estadísticos y de mejora de la experiencia de navegación.</p>
+            <p><strong>2. Cookies de terceros.</strong> Herramientas como Google Ads y Google Analytics pueden almacenar cookies para medir conversiones y optimizar anuncios, conforme a sus propias políticas de privacidad.</p>
+            <p><strong>3. Administración.</strong> Puedes bloquear o eliminar las cookies desde la configuración de tu navegador en cualquier momento.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <div class="brand" style="margin-bottom:14px;">
+        <svg class="tread" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="34" stroke-width="5" stroke-dasharray="9 7"/>
+          <circle cx="50" cy="50" r="22" stroke-width="5" stroke-dasharray="6 6"/>
+          <circle cx="50" cy="50" r="10" stroke-width="5"/>
+        </svg>
+        <span class="wordmark" style="font-size:1.2rem;">SERVI<span>AUTO</span>SFIN</span>
+      </div>
+      <p style="font-size:.85rem; color:var(--steel-light); max-width:280px;">Taller mecánico automotriz en Chile. Mantención, diagnóstico y reparación con garantía escrita.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#garantia">Garantía</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#pol-privacidad">Política de Privacidad</a></li>
+        <li><a href="#pol-terminos">Términos y Condiciones</a></li>
+        <li><a href="#pol-garantia">Política de Garantía</a></li>
+        <li><a href="#pol-cookies">Política de Cookies</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li>+56 9 1234 5678</li>
+        <li>contacto@serviautosfin.cl</li>
+        <li>San Joaquín, Región Metropolitana</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> Serviautosfin. Todos los derechos reservados. RUT 76.543.210-8.</span>
+    <span>Sitio preparado para campañas de Google Ads.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: .12 });
+    revealEls.forEach(el=>io.observe(el));
+  } else {
+    revealEls.forEach(el=>el.classList.add('in'));
+  }
+
+  // Accordion (policies)
+  document.querySelectorAll('.acc-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      // close others
+      document.querySelectorAll('.acc-btn').forEach(b=>{
+        if(b !== btn){
+          b.setAttribute('aria-expanded','false');
+          document.getElementById(b.getAttribute('aria-controls')).style.maxHeight = null;
+        }
+      });
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      panel.style.maxHeight = isOpen ? null : panel.scrollHeight + 'px';
+    });
+  });
+
+  // Contact form (demo submit — connect to your own backend / form service)
+  const form = document.getElementById('contact-form');
+  const msg = document.getElementById('form-msg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
+      return;
+    }
+    // NOTE: This is a client-side demo. Connect this form to a backend
+    // (e.g. Formspree, Google Sheets webhook, or your own email API)
+    // by setting an "action" on the <form> and removing this preventDefault,
+    // or by sending the data via fetch() to your endpoint here.
+    msg.textContent = '¡Gracias! Recibimos tu consulta y te contactaremos a la brevedad.';
+    msg.className = 'form-msg ok';
+    form.reset();
+
+    // Placeholder for Google Ads conversion tracking, e.g.:
+    // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXX'});
+  });
+
+  // Optional: fire a conversion event placeholder on call/WhatsApp clicks
+  ['cta-call-header','cta-call-hero','cta-whatsapp-hero'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el){
+      el.addEventListener('click', function(){
+        // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXX'});
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
